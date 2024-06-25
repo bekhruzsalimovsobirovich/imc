@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Oxu uz dashboard</title>
+    <title>IMC dashboard</title>
 
     <!-- Global stylesheets -->
     <link href="{{asset('dashboard/assets/fonts/inter/inter.css')}}" rel="stylesheet" type="text/css">
@@ -45,8 +45,8 @@
                                 <div class="d-inline-flex align-items-center justify-content-center mb-4 mt-2">
                                     <img src="{{asset('dashboard/assets/images/logo_icon.svg')}}" class="h-48px" alt="">
                                 </div>
-                                <h5 class="mb-0">Iltimos tizimga kiring</h5>
-                                <span class="d-block text-muted">Login va parolingiz yordamida</span>
+                                <h5 class="mb-0">Please enter login</h5>
+                                <span class="d-block text-muted">Using your login and password</span>
                             </div>
 
                             <div class="mb-3">
@@ -60,7 +60,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label">Parol</label>
+                                <label class="form-label">Password</label>
                                 <div class="form-control-feedback form-control-feedback-start">
                                     <input type="password" class="form-control" placeholder="•••••••••••"
                                            name="password">
@@ -71,7 +71,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-primary w-100">Kirish</button>
+                                <button type="submit" class="btn btn-primary w-100">Log in</button>
                             </div>
                         </div>
                     </div>
