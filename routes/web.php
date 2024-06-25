@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\News\NewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'auth'])->name('auth.login');
+Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+
+//---------------------------------------------------------------  ADMIN START -------------------------------------------------------------------------------------------------
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth:sanctum']], function () {
+    Route::get('index', [HomeController::class, 'index'])->name('admin.home');
+    Route::resource('novelties',NewController::class);
 });
+//---------------------------------------------------------------  ADMIN END -----------------------------------------------------------------------------------------------------
