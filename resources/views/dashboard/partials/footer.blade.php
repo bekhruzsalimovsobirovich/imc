@@ -1,6 +1,6 @@
 <div class="navbar navbar-sm navbar-footer border-top">
     <div class="container-fluid">
-        <span>&copy; 2022 - {{ date('Y') }} <a target="_blank" href="https://oxu.uz">imc</a></span>
+        <span>&copy; 1994 - {{ date('Y') }} <a target="_blank" href="https://oxu.uz">imctashkent.uz</a></span>
 
         <ul class="nav">
 {{--            <li class="nav-item">--}}

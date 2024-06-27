@@ -43,10 +43,10 @@
                         <div class="card-body">
                             <div class="text-center mb-3">
                                 <div class="d-inline-flex align-items-center justify-content-center mb-4 mt-2">
-                                    <img src="{{asset('dashboard/assets/images/logo_icon.svg')}}" class="h-48px" alt="">
+                                    <img src="{{asset('logo-dark.png')}}" style="height: 6rem;" alt="">
                                 </div>
-                                <h5 class="mb-0">Please enter login</h5>
-                                <span class="d-block text-muted">Using your login and password</span>
+{{--                                <h5 class="mb-0">Please enter login</h5>--}}
+{{--                                <span class="d-block text-muted">Using your login and password</span>--}}
                             </div>
 
                             <div class="mb-3">
