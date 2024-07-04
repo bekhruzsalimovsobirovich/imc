@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\News\NewController;
+use App\Http\Controllers\Vacancies\VacancyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,5 @@ Route::group(['middleware' => ['cors']], function (){
     Route::get('/new',[NewController::class,'getNew']);
     Route::get('/new/{novelty}',[NewController::class,'showNew']);
     Route::get('/event',[NewController::class,'getEvent']);
+    Route::get('/vacancy',[VacancyController::class,'getPaginate']);
 });

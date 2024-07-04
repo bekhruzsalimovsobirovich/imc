@@ -41,6 +41,12 @@
                         <span>News and Events</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('vacancies.index') }}" class="nav-link">
+                        <i class="ph-article"></i>
+                        <span>Vacancies</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- /main navigation -->

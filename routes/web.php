@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\News\NewController;
+use App\Http\Controllers\Vacancies\VacancyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,5 +25,6 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth:sanctum']], function () {
     Route::get('index', [HomeController::class, 'index'])->name('admin.home');
     Route::resource('novelties',NewController::class);
+    Route::resource('vacancies',VacancyController::class);
 });
 //---------------------------------------------------------------  ADMIN END -----------------------------------------------------------------------------------------------------
