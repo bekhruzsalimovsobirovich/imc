@@ -7,6 +7,7 @@ class StoreVacancyDTO
     private string $title;
     private ?string $description = null;
     private ?float $salary = null;
+    private ?string $type=null;
 
     public static function fromArray(array $data)
     {
@@ -14,7 +15,24 @@ class StoreVacancyDTO
         $dto->setTitle($data['title']);
         $dto->setDescription($data['description'] ?? null);
         $dto->setSalary($data['salary'] ?? null);
+        $dto->setType($data['type'] ?? null);
         return $dto;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string|null $type
+     */
+    public function setType(?string $type): void
+    {
+        $this->type = $type;
     }
 
     /**

@@ -11,12 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vacancies', function (Blueprint $table) {
+        Schema::create('faculties', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('fullname');
+            $table->string('phone');
+            $table->string('job_position');
+            $table->string('job_time');
             $table->text('description')->nullable();
-            $table->unsignedDouble('salary')->nullable();
-            $table->enum('type',['student-career'])->nullable();
+            $table->string('image')->nullable();
+            $table->string('path')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('vacancies');
+        Schema::dropIfExists('faculties');
     }
 };

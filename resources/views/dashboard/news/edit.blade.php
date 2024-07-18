@@ -41,11 +41,24 @@
                             <label class="form-check-label" for="news">News <span
                                     class="text-danger fw-bold">*</span></label>
                         </div>
-                        <div class="form-check form-switch">
+                        <div class="form-check form-switch me-4">
                             <input type="radio" name="type" class="form-check-input form-check-input-success"
                                    id="events"
                                    value="events">
                             <label class="form-check-label" for="events">Events <span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success" id="graduation"
+                                   value="graduation">
+                            <label class="form-check-label" for="graduation">Graduation ceremony<span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success" id="exchange"
+                                   value="exchange">
+                            <label class="form-check-label" for="exchange">Exchange program <span
                                     class="text-danger fw-bold">*</span></label>
                         </div>
                     @elseif($novelty->type == 'events')
@@ -55,11 +68,78 @@
                             <label class="form-check-label" for="news">News <span
                                     class="text-danger fw-bold">*</span></label>
                         </div>
-                        <div class="form-check form-switch">
+                        <div class="form-check form-switch me-4">
                             <input checked type="radio" name="type" class="form-check-input form-check-input-success"
                                    id="events"
                                    value="events">
                             <label class="form-check-label" for="events">Events <span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success" id="graduation"
+                                   value="graduation">
+                            <label class="form-check-label" for="graduation">Graduation ceremony<span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success" id="exchange"
+                                   value="exchange">
+                            <label class="form-check-label" for="exchange">Exchange program <span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+                    @elseif($novelty->type == 'graduation')
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success" id="news"
+                                   value="news">
+                            <label class="form-check-label" for="news">News <span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success"
+                                   id="events"
+                                   value="events">
+                            <label class="form-check-label" for="events">Events <span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+                        <div class="form-check form-switch me-4">
+                            <input checked type="radio" name="type" class="form-check-input form-check-input-success" id="graduation"
+                                   value="graduation">
+                            <label class="form-check-label" for="graduation">Graduation ceremony<span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success" id="exchange"
+                                   value="exchange">
+                            <label class="form-check-label" for="exchange">Exchange program <span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+                    @elseif($novelty->type == 'exchange')
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success" id="news"
+                                   value="news">
+                            <label class="form-check-label" for="news">News <span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success"
+                                   id="events"
+                                   value="events">
+                            <label class="form-check-label" for="events">Events <span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success" id="graduation"
+                                   value="graduation">
+                            <label class="form-check-label" for="graduation">Graduation ceremony<span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+
+                        <div class="form-check form-switch me-4">
+                            <input checked type="radio" name="type" class="form-check-input form-check-input-success" id="exchange"
+                                   value="exchange">
+                            <label class="form-check-label" for="exchange">Exchange program <span
                                     class="text-danger fw-bold">*</span></label>
                         </div>
                     @else
@@ -69,11 +149,24 @@
                             <label class="form-check-label" for="news">News <span
                                     class="text-danger fw-bold">*</span></label>
                         </div>
-                        <div class="form-check form-switch">
+                        <div class="form-check form-switch me-4">
                             <input type="radio" name="type" class="form-check-input form-check-input-success"
                                    id="events"
                                    value="events">
                             <label class="form-check-label" for="events">Events <span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success" id="graduation"
+                                   value="graduation">
+                            <label class="form-check-label" for="graduation">Graduation ceremony<span
+                                    class="text-danger fw-bold">*</span></label>
+                        </div>
+
+                        <div class="form-check form-switch me-4">
+                            <input type="radio" name="type" class="form-check-input form-check-input-success" id="exchange"
+                                   value="exchange">
+                            <label class="form-check-label" for="exchange">Exchange program <span
                                     class="text-danger fw-bold">*</span></label>
                         </div>
                     @endif

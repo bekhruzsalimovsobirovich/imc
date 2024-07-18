@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('image')->nullable();
             $table->string('path')->nullable();
-            $table->enum('type',['news','events']);
+            $table->enum('type',['news','events','graduation','exchange']);
             $table->timestamps();
         });
     }

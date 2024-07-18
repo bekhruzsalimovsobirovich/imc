@@ -4,8 +4,14 @@
         @if($novelty->type == 'news')
             <span class="fw-semibold fs-2 text-center">News</span>
             <i class="fs-2 ph-info float-end ms-2"></i>
-        @else
+        @elseif($novelty->type == 'events')
             <span class="fw-semibold fs-2 text-center">Events</span>
+            <i class="fs-2 ph-info float-end ms-2"></i>
+        @elseif($novelty->type == 'graduation')
+            <span class="fw-semibold fs-2 text-center">Graduation ceremony</span>
+            <i class="fs-2 ph-info float-end ms-2"></i>
+        @else
+            <span class="fw-semibold fs-2 text-center">Exchange program</span>
             <i class="fs-2 ph-info float-end ms-2"></i>
         @endif
     </div>

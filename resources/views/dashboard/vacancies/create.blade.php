@@ -30,6 +30,15 @@
                     <label for="salary" class="form-label">Salary</label>
                     <input type="number" name="salary" class="form-control" id="salary">
                 </div>
+
+                <div class="col-md-6 d-flex align-items-center justify-content-start">
+
+                    <div class="form-check form-switch">
+                        <input type="checkbox" name="type" class="form-check-input form-check-input-success" id="student-career"
+                               value="student-career">
+                        <label class="form-check-label" for="student-career">Student career</label>
+                    </div>
+                </div>
             </div>
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary w-100">Save <i class="ph-paper-plane-tilt ms-2"></i>

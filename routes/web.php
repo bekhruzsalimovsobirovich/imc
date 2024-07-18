@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Faculties\FacultyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\News\NewController;
 use App\Http\Controllers\Vacancies\VacancyController;
@@ -26,5 +27,6 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth:sanctum']], functi
     Route::get('index', [HomeController::class, 'index'])->name('admin.home');
     Route::resource('novelties',NewController::class);
     Route::resource('vacancies',VacancyController::class);
+    Route::resource('faculties',FacultyController::class);
 });
 //---------------------------------------------------------------  ADMIN END -----------------------------------------------------------------------------------------------------

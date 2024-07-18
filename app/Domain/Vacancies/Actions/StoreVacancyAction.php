@@ -17,6 +17,7 @@ class StoreVacancyAction
             $vacancy->title = $dto->getTitle();
             $vacancy->description = $dto->getDescription();
             $vacancy->salary = $dto->getSalary();
+            $vacancy->type = $dto->getType();
             $vacancy->save();
         } catch (Exception $exception) {
             DB::rollBack();

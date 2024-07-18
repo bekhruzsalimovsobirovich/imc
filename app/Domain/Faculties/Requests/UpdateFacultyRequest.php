@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Domain\Vacancies\Requests;
+namespace App\Domain\Faculties\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreVacancyRequest extends FormRequest
+class UpdateFacultyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,10 +22,14 @@ class StoreVacancyRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required',
+            'fullname' => 'required',
+            'phone' => 'required',
+            'job_position' => 'required',
+            'job_time' => 'required',
             'description' => 'nullable',
-            'salary' => 'nullable',
-            'type' => 'nullable',
+            'image' => 'nullable|max:5120|mimes:png,jpg,jpeg',
+            'path' => 'nullable|string',
+            'faculty' => 'nullable|json',
         ];
     }
 }
