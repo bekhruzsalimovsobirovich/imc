@@ -54,6 +54,13 @@
                         <span>Faculties</span>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('galleries.index') }}" class="nav-link">
+                        <i class="ph-article"></i>
+                        <span>Galleries</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- /main navigation -->

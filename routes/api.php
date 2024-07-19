@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Faculties\FacultyController;
+use App\Http\Controllers\Galleries\GalleryController;
 use App\Http\Controllers\News\NewController;
 use App\Http\Controllers\Vacancies\VacancyController;
 use Illuminate\Http\Request;
@@ -29,4 +30,5 @@ Route::group(['middleware' => ['cors']], function (){
     Route::get('/exchange-program',[NewController::class,'getExchange']);
     Route::get('/vacancy',[VacancyController::class,'getPaginate']);
     Route::get('/faculty',[FacultyController::class,'getPaginate']);
+    Route::get('/gallery',[GalleryController::class,'paginate']);
 });
