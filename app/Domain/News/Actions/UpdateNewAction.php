@@ -25,6 +25,7 @@ class UpdateNewAction
             $new = $dto->getNovelty();
             $new->title = $dto->getTitle();
             $new->description = $dto->getDescription() ?? $dto->getNovelty()->description;
+            $new->type = $dto->getType() ?? $dto->getNovelty()->type;
             if ($dto->getImage() !== null) {
                 File::delete('storage/files/news/images/' . $dto->getNovelty()->image);
                 $image = $dto->getImage();
