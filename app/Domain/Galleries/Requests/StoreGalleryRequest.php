@@ -22,7 +22,7 @@ class StoreGalleryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'img' => 'nullable|max:102400|mimes:png,jpg,jpeg',
+            'img' => 'nullable|max:102400|mimes:png,jpg,jpeg,heic',
             'video' => 'nullable|max:102400|mimes:mp4,avif',
             'img_path' => 'nullable|string',
             'video_path' => 'nullable|string',
