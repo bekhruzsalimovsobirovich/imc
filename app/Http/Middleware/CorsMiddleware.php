@@ -8,18 +8,28 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CorsMiddleware
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request)
-            ->header('Access-Control-Allow-Origin', '*')
-            ->header('Access-Control-Allow-Methods', '*')
-            ->header('Access-Control-Allow-Credentials', true)
-            ->header('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,X-Token-Auth,Authorization')
-            ->header('Accept', 'application/json');
+        // Handle OPTIONS requests
+        if ($request->getMethod() === 'OPTIONS') {
+            return response('', 204)
+                ->withHeaders([
+                    'Access-Control-Allow-Origin' => $request->headers->get('Origin') ?? '*',
+                    'Access-Control-Allow-Methods' => 'GET, POST, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers' => 'Content-Type, Authorization',
+                    'Access-Control-Allow-Credentials' => 'true',
+                ]);
+        }
+
+        $response = $next($request);
+
+        // Set headers using headers->set() to avoid BinaryFileResponse errors
+        $response->headers->set('Access-Control-Allow-Origin', $request->headers->get('Origin') ?? '*');
+        $response->headers->set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+        $response->headers->set('Access-Control-Allow-Credentials', 'true');
+
+        return $response;
     }
+
 }
